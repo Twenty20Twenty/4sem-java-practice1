@@ -1,8 +1,15 @@
 package nstu;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Pokemon {
+    @JsonProperty("name")
     private String name;
+    @JsonProperty("height")
     private int height;
+    @JsonProperty("id")
     private int id;
 
     public Pokemon(){
